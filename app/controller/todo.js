@@ -1,13 +1,9 @@
 const { Controller } = require("egg");
 
 class TodoController extends Controller {
-  async index() {}
-
-  // `PUT /api/todo`
-  async update() {}
-
-  // `DELETE /api/todo`
-  async destroy() {}
+  async index(...args) {
+    this.create(...args);
+  }
 
   async create() {
     const { ctx, service } = this;

@@ -9,7 +9,7 @@ describe("test/app/controller/todo.test.js", () => {
       .expect("Content-Type", /json/)
       .expect("X-Response-Time", /\d+ms/)
       .expect(201)
-      .expect((res) => {
+      .expect(res => {
         assert(res.body.id);
         assert(res.body.title === "Add one");
         assert(res.body.completed === false);

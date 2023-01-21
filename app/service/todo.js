@@ -1,8 +1,6 @@
 const { Service } = require("egg");
 
 class TodoService extends Service {
-  store = [];
-
   async create(todo) {
     if (!todo.title) this.ctx.throw(422, "需要title");
 
